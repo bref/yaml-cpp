@@ -148,9 +148,9 @@ namespace YAML
 			
 			// check for null
 			if(!m_scanner.empty()) {
-				const Token& token = m_scanner.peek();
-				if(token.type == Token::BLOCK_ENTRY || token.type == Token::BLOCK_SEQ_END) {
-					eventHandler.OnNull(token.mark, NullAnchor);
+				const Token& tk = m_scanner.peek();
+				if(tk.type == Token::BLOCK_ENTRY || tk.type == Token::BLOCK_SEQ_END) {
+					eventHandler.OnNull(tk.mark, NullAnchor);
 					continue;
 				}
 			}
