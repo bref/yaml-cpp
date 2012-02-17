@@ -7,6 +7,7 @@ list(APPEND test_sources ${test_old_api_sources})
 include_directories(${YAML_CPP_SOURCE_DIR}/test)
 
 add_executable(run-tests
+	EXCLUDE_FROM_ALL
 	${test_sources}
 	${test_headers}
 )
